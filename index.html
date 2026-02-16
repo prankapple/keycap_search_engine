@@ -1,0 +1,55 @@
+<!-- Created: 2026-02-16T07:58:42.462Z | ID: nta59ph4r | Keycap Editor -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Engine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Search Engine Logo">
+        </div>
+        <div class="search-bar">
+            <form>
+                <input type="text" id="search-input" placeholder="Search the web or type a URL">
+                <button id="search-button">Search</button>
+            </form>
+        </div>
+    </header>
+    <main>
+        <div class="results-container">
+            <!-- Results will be displayed here -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Search Engine</p>
+    </footer>
+    <script>
+      // Get the search input and button elements
+      const searchInput = document.getElementById('search-input');
+      const searchButton = document.getElementById('search-button');
+      const resultsContainer = document.querySelector('.results-container');
+
+      // Add an event listener to the search button
+      searchButton.addEventListener('click', (e) => {
+          e.preventDefault();
+          const searchTerm = searchInput.value.trim();
+          if (searchTerm !== '') {
+              // Display results
+              const resultsHtml = 
+                  <h2>Results for "${searchTerm}"</h2>
+                  <ul>
+                      <li><a href="#">Result 1</a></li>
+                      <li><a href="#">Result 2</a></li>
+                      <li><a href="#">Result 3</a></li>
+                  </ul>
+              ;
+              resultsContainer.innerHTML = resultsHtml;
+          }
+      });
+    </script>
+</body>
+</html>
